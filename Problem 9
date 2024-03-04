@@ -1,4 +1,4 @@
-//9.Print only 12345 from below string   "ABCDE12345"
+//9. Print only 12345 from below string   "ABCDE12345"
 
 package JavaAssignment;
 
@@ -26,5 +26,4 @@ public class Program9
         }
         System.out.println("Extracted digits: "+digit);
     }
-
 }
