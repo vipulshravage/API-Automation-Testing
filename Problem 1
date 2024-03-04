@@ -1,0 +1,18 @@
+// 1.Write a java program to add two float numbers like 8.6 and 9.7
+
+package JavaAssignment;
+
+public class FloatAddition
+{
+
+    public static void main(String[] args)
+    {
+        FloatAddition fa=new FloatAddition();
+        System.out.println("Addition of Float : "+fa.additionOfFloat(8.6f ,9.7f));
+
+    }
+    public float additionOfFloat(float a,float b)
+    {
+        return a+b;
+    }
+}
