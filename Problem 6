@@ -1,0 +1,58 @@
+/*Write a program where create an int type arraylist object. Then add 200 to 500 numbers
+into the ArrayList then Print the ArrayList.
+        1.Perform the same for HashSet and print
+        2.Perform the same for TreeSet and print */
+
+package JavaAssignment;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
+public class Program6
+{
+    public static void main(String[] args)
+    {
+        Program6 arr=new Program6();
+        arr.arrayList();
+        arr.hashSet();
+        arr.treeSet();
+
+    }
+
+    public void arrayList()
+    {
+        ArrayList<Integer> numberList = new ArrayList<Integer>();
+
+        for(int i=200;i<=500;i++)
+        {
+            numberList.add(i);
+        }
+        System.out.println("ArrayList : "+numberList);
+    }
+
+    public void hashSet()
+    {
+        HashSet<Integer> hashnumber=new HashSet<Integer>();
+
+        for(int i=200;i<=500;i++)
+        {
+            hashnumber.add(i);
+        }
+        System.out.println("HashSet : "+hashnumber);
+
+    }
+
+    public void treeSet()
+    {
+        TreeSet<Integer> treenumber=new TreeSet<Integer>();
+
+        for(int i=200;i<=500;i++)
+        {
+            treenumber.add(i);
+        }
+        System.out.println("TreeSet : "+treenumber);
+    }
+
+}
