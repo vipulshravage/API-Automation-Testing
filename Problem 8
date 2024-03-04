@@ -1,0 +1,44 @@
+//String a = "Welcome To Java" , count the number of space present in the
+// sentence and print only "Welcome" using array.
+
+
+package JavaAssignment;
+import java.util.Arrays;
+
+public class Program8
+
+{
+    String a = "Welcome To Java";
+
+    public static void main(String[] args)
+    {
+        Program8 obj=new Program8();
+        obj.numberOfSpace();
+        obj.printFirstWord();
+    }
+
+    public void numberOfSpace()
+    {
+        int count=0;
+        for(int i=0;i<a.length();i++)
+        {
+            if(a.charAt(i)==' ')
+            {
+                count++;
+            }
+        }
+        System.out.println("Number of Spaces: "+count);
+
+    }
+
+    public void printFirstWord()
+    {
+        String [] str=a.split(" ");
+        for(int i=0;i<str.length;i++)
+        {
+            System.out.println(str[i]);
+        }
+
+        System.out.println("First Word is: "+str[0]);
+    }
+}
