@@ -1,0 +1,40 @@
+/* 7.Find the value of C in below Program and return it? public int returnNumber()
+{
+    int c = 0;
+    float a = 7.8f;
+    float b = 4.4f;
+    // c=a+b;
+    return c;
+  } */
+//-------------------------------------------------------------------
+
+package JavaAssignment;
+
+public class Program7
+{
+    int c = 0;
+    float a = 7.8f;
+    float b = 4.4f;
+
+    public static void main(String[] args)
+    {
+        Program7 ob=new Program7();
+        System.out.println("Addition is : "+ob.returnNumber());
+
+    }
+    public int returnNumber()
+    {
+        int num3;
+        //System.out.println(a);
+        int num1=(int)a;  //Type Casting float to int
+        //System.out.println(num1);
+
+        //System.out.println(b);
+        int num2=(int)b;  //Type Casting float to int
+        //System.out.println(num2);
+
+        num3=num1+num2;
+
+        return num3;
+    }
+}
