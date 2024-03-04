@@ -1,0 +1,46 @@
+//4.Write a function which accepts 3 parameters. 2 integers and 1 String. If String parameter is 'add' then it would add two integers. Similarly 'subs'/'multiplication'/'division'.
+
+package JavaAssignment;
+
+import javax.swing.*;
+
+public class Program4
+{
+    public static void main(String[] args)
+    {
+        Program4 ob=new Program4();
+        System.out.println("Result: "+ob.arithmeticOperations(12,9,"add"));
+
+    }
+    static int arithmeticOperations(int num1,int num2,String op)
+    {
+        int result=0;
+        switch (op)
+        {
+            case "add":
+                result=num1+num2;
+                break;
+            case "subs":
+                result=num1-num2;
+                break;
+            case "multiplication":
+                result=num1*num2;
+                break;
+            case "division":
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                }
+                else
+                {
+                    System.out.println("Error: Division by zero!");
+                }
+                break;
+            default:
+                System.out.println("Invalid Output");
+                break;
+        }
+        return result;
+    }
+
+}
