@@ -1,0 +1,32 @@
+/*18. Write a program to print – (Use appropriate String methods)
+Only First name from “Sachin Tendulkar”
+Only Second name from “Rahul Dravid”  */
+
+package JavaAssignment;
+import java.sql.SQLOutput;
+
+public class Program18
+{
+    String firstname="Sachin Tendulkar";
+    String lastname="Rahul Dravid";
+
+    public static void main(String[] args)
+    {
+        Program18 obj=new Program18();
+        obj.printFirstName();
+        obj.printLastName();
+    }
+
+    public void printFirstName()
+    {
+        int index=firstname.indexOf(' ');
+        String str=firstname.substring(0,index);
+        System.out.println("First Name: "+str);
+    }
+    public void printLastName()
+    {
+        int index=lastname.lastIndexOf(' ');
+        String str=lastname.substring(index+1);
+        System.out.println("Last Name: "+str);
+    }
+}
