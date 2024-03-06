@@ -1,0 +1,27 @@
+//11. If EmpNo=123 then EmpName=Jadeja. Like this how can we keep 100 EmpName with its EmpId?
+
+package JavaAssignment;
+
+import java.util.HashMap;
+
+public class Program11
+{
+
+    public static void main(String[] args)
+    {
+        Program11 obj=new Program11();
+        obj.empDetails();
+    }
+
+    public void empDetails()
+    {
+        HashMap<Integer,String> empmap=new HashMap<>();
+        empmap.put(123,"Jadeja");
+        empmap.put(124,"Virat");
+        empmap.put(125,"Sachin");
+        empmap.put(126,"Aditya");
+        empmap.put(127,"Jayesh");
+
+        System.out.println("Employee Details: "+empmap);
+    }
+}
