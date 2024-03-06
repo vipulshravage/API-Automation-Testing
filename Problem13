@@ -1,0 +1,37 @@
+//13. Write a Program to Reverse The String "Welcome To Java"
+
+package JavaAssignment;
+
+public class Program13
+{
+    String original_string="Welcome to JAVA";
+    //String  reverse_string=reverseString(original_string);
+
+    public static void main(String[] args)
+    {
+        Program13 obj=new Program13();
+        System.out.println("Original String: "+obj.original_string);
+        obj.reverseString(obj.original_string);
+        System.out.println();
+
+
+    }
+
+    public void reverseString(String strr)
+    {
+        char[] chars=strr.toCharArray();
+        System.out.println(chars);
+        int left=0;
+        int right=chars.length-1;
+
+        while(left<right)
+        {
+            char temp;
+            temp=chars[left];
+            chars[left]=chars[right];
+            chars[right]=temp;
+            left++;
+            right--;
+        }
+    }
+}
