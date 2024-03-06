@@ -1,0 +1,36 @@
+/*
+19. Write a program to - (Use appropriate String methods)
+Correct the spelling mistake from “Davi Beckham” to “David Beckham”
+Correct the number of goals scored by Lionel Messi from 400 to 579
+
+ */
+package JavaAssignment;
+
+public class Program19
+{
+    static String name="Davi Beckham";
+    String score="Lionel Messi has scored 400 goals";
+
+    public static void main(String[] args)
+    {
+        System.out.println("Corrected Name: "+correctTheSpelling(name));
+
+        Program19 obj=new Program19();
+        System.out.println("Corrected number of goals scored: "+obj.correctTheNumber(obj.score));
+
+    }
+
+    static String correctTheSpelling(String s1)
+    {
+        String str;
+        str=name.replace("Davi","David");
+        return str;
+    }
+
+    public String correctTheNumber(String s2)
+    {
+        String str;
+        str=score.replace("400","579");
+        return str;
+    }
+}
