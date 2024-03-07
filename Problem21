@@ -1,0 +1,31 @@
+/*
+21. Write a program to replace the - (Use appropriate String methods)
+
+Original name from “Liverpool” to “Liverpool Football Club”
+Original name from “City” to “Manchester City”
+ */
+
+package JavaAssignment;
+
+public class Program21
+{
+    String str1="Liverpool";
+    String str2="City";
+
+    public static void main(String[] args)
+    {
+        Program21 obj=new Program21();
+        obj.replaceStr();
+    }
+
+    public void replaceStr()
+    {
+        String a;
+        String b;
+        a=str1.replace("Liverpool","Liverpool Football Club");
+        b=str2.replace("City","Manchester City");
+        System.out.println(a);
+        System.out.println(b);
+
+    }
+}
