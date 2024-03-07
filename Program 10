@@ -1,0 +1,29 @@
+//How can we access private data from one class to other class? Explain and write down the code for it?
+
+package JavaAssignment;
+
+public class Program10A
+{
+    private int privateData;
+
+    public static void main(String[] args)
+    {
+        Program10A obj = new Program10A();
+
+        // Accessing privateData using setter
+        obj.setPrivateData(10);
+        // Accessing privateData using getter
+        int value = obj.getPrivateData();
+
+        System.out.println("Private Data: " + value);
+    }
+        public void setPrivateData(int data)
+        {
+            privateData = data;
+        }
+        public int getPrivateData()
+        {
+            return privateData;
+        }
+}
+
