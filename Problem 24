@@ -1,29 +1,29 @@
 package JavaAssignment;
 
-public class OverloadedConstructors
+public class Program23A
 {
-    private int value;
     public static void main(String[] args)
     {
-        OverloadedConstructors obj1 = new OverloadedConstructors();
-        OverloadedConstructors obj2 = new OverloadedConstructors(10);
-        OverloadedConstructors obj3 = new OverloadedConstructors("Hello, constructors!");
+        Program23A obj=new Program23A();
+        obj.exceptionHanding();
     }
 
-    public OverloadedConstructors()
+    public void exceptionHanding()
     {
-        System.out.println("Constructor 1 called");
-        this.value = 0;
-    }
-    public OverloadedConstructors(int value)
-    {
-        System.out.println("Constructor 2 called");
-        this.value = value;
-    }
-    public OverloadedConstructors(String message)
-    {
-        System.out.println("Constructor 3 called");
-        System.out.println("Message: " + message);
+        int[] arr={1,2,3,4,5,6,7,8};
 
+        try
+        {
+            int element = arr[5];
+            System.out.println("Element at index 3: " + element);
+        }
+            catch(ArrayIndexOutOfBoundsException e)
+            {
+                System.out.println("Array index out for the Bounds..!!");
+            }
+        finally
+        {
+            System.out.println("Finally executed");
+        }
     }
 }
