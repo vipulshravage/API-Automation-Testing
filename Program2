@@ -1,0 +1,34 @@
+//2. From Class_A, call/print an integer variable which is present is Class B. Where use constructor to reset the value of the variable from Class_A to Class B.
+
+//===> Class A
+package JavaAssignment;
+
+public class Program2A
+{
+    static int original_value=23;
+
+    public static void main(String[] args)
+    {
+        Program2B obj1=new Program2B();
+        System.out.println("Accessing variable of Class B in A: "+obj1.variableofClassA);
+        System.out.println("Original Value: "+original_value);
+        System.out.println("Reset Value : "+obj1.Program2B(45));
+
+    }
+}
+
+----------------------------------------------------------------------------------
+//===> Class B
+
+package JavaAssignment;
+
+public class Program2B
+{
+    int variableofClassA=90;
+    public int Program2B(int a)
+    {
+        Program2A ob=new Program2A();
+        ob.original_value=a;
+        return ob.original_value;
+    }
+}
