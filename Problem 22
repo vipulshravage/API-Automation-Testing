@@ -1,0 +1,31 @@
+//22. Write a program to print “Narendra Modi” to - (Use appropriate String methods)
+//UpperCase & the LowerCase
+
+package JavaAssignment;
+
+public class Program22
+{
+    String str="Narendra Modi";
+
+    public static void main(String[] args)
+    {
+        Program22 obj=new Program22();
+        System.out.println("Give String is: "+obj.str);
+        obj.lowerCase();
+        obj.upperCase();
+    }
+
+    public void lowerCase()
+    {
+        String lower;
+        lower=str.toLowerCase();
+        System.out.println("Lower Case: "+lower);
+    }
+
+    public void upperCase()
+    {
+        String upper;
+        upper=str.toUpperCase();
+        System.out.println("Upper Case: "+upper);
+    }
+}
