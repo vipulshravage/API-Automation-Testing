@@ -1,0 +1,29 @@
+package JavaAssignment;
+
+public class OverloadedConstructors
+{
+    private int value;
+    public static void main(String[] args)
+    {
+        OverloadedConstructors obj1 = new OverloadedConstructors();
+        OverloadedConstructors obj2 = new OverloadedConstructors(10);
+        OverloadedConstructors obj3 = new OverloadedConstructors("Hello, constructors!");
+    }
+
+    public OverloadedConstructors()
+    {
+        System.out.println("Constructor 1 called");
+        this.value = 0;
+    }
+    public OverloadedConstructors(int value)
+    {
+        System.out.println("Constructor 2 called");
+        this.value = value;
+    }
+    public OverloadedConstructors(String message)
+    {
+        System.out.println("Constructor 3 called");
+        System.out.println("Message: " + message);
+
+    }
+}
