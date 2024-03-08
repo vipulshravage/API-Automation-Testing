@@ -1,34 +1,32 @@
 //23. Write a program to Catch any exception in java. Use try catch and finally statements
 
+
 package JavaAssignment;
 
-public class Program23
+public class Program23A
 {
-    int a=20;
-    int b=0;
-
     public static void main(String[] args)
     {
-        Program23 obj=new Program23();
+        Program23A obj=new Program23A();
         obj.exceptionHanding();
     }
 
     public void exceptionHanding()
     {
-        int result;
+        int[] arr={1,2,3,4,5,6,7,8};
 
         try
         {
-            result=a/b;
-            System.out.println("Result is: "+result);
+            int element = arr[9];
+            System.out.println("Element at index 3: " + element);
         }
-        catch (Exception e)
-        {
-            System.out.println("An error occurred: "+e.getMessage());
-        }
+            catch(Exception e)
+            {
+                System.out.println("Array index out for the Bounds..!!");
+            }
         finally
         {
-            System.out.println("Finally block executed.");
+            System.out.println("Finally executed");
         }
     }
 }
