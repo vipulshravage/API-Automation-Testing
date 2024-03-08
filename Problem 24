@@ -1,29 +1,54 @@
+//24. Write a program to create 3 overloaded constructors and print all the 3 overloaded constructors.
+
 package JavaAssignment;
 
-public class Program23A
+public class Shape
 {
+    double base,height;
+    int s1,s2,s3,radius;
+
     public static void main(String[] args)
     {
-        Program23A obj=new Program23A();
-        obj.exceptionHanding();
+        Shape obj=new Shape(4);
+        System.out.println("Area Of Circle: "+obj.areaOfCircle());
+
+        Shape obj1=new Shape(4.5,5.5);
+        System.out.println("Area Of Triangle: "+obj1.areaOfTriangle());
+
+        Shape obj2=new Shape(1,2,3);
+        System.out.println("Perimeter Of Triangle: "+obj2.perimeterOfTriangle());
+
     }
 
-    public void exceptionHanding()
+    public Shape(int r)  // constructor 1
     {
-        int[] arr={1,2,3,4,5,6,7,8};
+        radius=r;
+    }
+    public Shape(double b,double h) //constructor 2
+    {
+        base=b;
+        height=h;
+    }
+    public Shape(int a,int b,int c)  // constructor 2
+    {
+         s1=a;
+         s2=b;
+         s3=c;
+    }
 
-        try
-        {
-            int element = arr[5];
-            System.out.println("Element at index 3: " + element);
-        }
-            catch(ArrayIndexOutOfBoundsException e)
-            {
-                System.out.println("Array index out for the Bounds..!!");
-            }
-        finally
-        {
-            System.out.println("Finally executed");
-        }
+
+    public double areaOfTriangle()
+    {
+        return 0.5*base*height;
+    }
+
+    public int perimeterOfTriangle()
+    {
+        return s1+s2+s3;
+    }
+
+    public double areaOfCircle()
+    {
+        return 3.14*radius*radius;
     }
 }
