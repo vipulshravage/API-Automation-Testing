@@ -4,34 +4,22 @@ package JavaAssignment;
 
 public class Program13
 {
-    String original_string="Welcome to JAVA";
-    //String  reverse_string=reverseString(original_string);
-
+    static String original_string="Welcome to JAVA";
+    String str;
+    char char1;
     public static void main(String[] args)
     {
+        System.out.println("Original String: "+original_string);
         Program13 obj=new Program13();
-        System.out.println("Original String: "+obj.original_string);
-        obj.reverseString(obj.original_string);
-        System.out.println();
-
-
+        obj.reverseString();
     }
-
-    public void reverseString(String strr)
+    public void reverseString()
     {
-        char[] chars=strr.toCharArray();
-        System.out.println(chars);
-        int left=0;
-        int right=chars.length-1;
-
-        while(left<right)
+        for (int i=0; i<original_string.length(); i++)
         {
-            char temp;
-            temp=chars[left];
-            chars[left]=chars[right];
-            chars[right]=temp;
-            left++;
-            right--;
+            char1= original_string.charAt(i);
+            str= char1+str;
         }
+        System.out.println("Reversed String: "+ str);
     }
 }
